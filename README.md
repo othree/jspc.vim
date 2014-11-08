@@ -1,4 +1,3 @@
-jspc.vim
-========
+JavasScript Parameter Complete a.k.a JSPC
+=========================================
 
-JavaScript Parameter Complete

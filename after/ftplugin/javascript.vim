@@ -6,7 +6,7 @@
 " URL:         https://github.com/othree/jspc.vim
 
 if &omnifunc != ''
-  call jspc#remember()
+  call jspc#init()
 endif
 
 

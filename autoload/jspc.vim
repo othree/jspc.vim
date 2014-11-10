@@ -5,16 +5,30 @@
 " Version:     0.1
 " URL:         https://github.com/othree/jspc.vim
 
-let s:omnifunc = ''
-
-function! jspc#remember()
-  let s:omnifunc = &omnifunc
+function! jspc#init()
+  let w:jspc_omnifunc = &omnifunc
+  let w:jspc_finding = 0
   set omnifunc=jspc#omni
 endfunction
 
 function! jspc#omni(findstart, base)
-  if s:omnifunc != ''
-    execute "let v = " . s:omnifunc . "(a:findstart, a:base)"
+  if a:findstart == 1
+    let v = -1
+    let v = jspc#complete(a:findstart, a:base)
+    if v >= 0
+      let w:jspc_finding = 1
+    elseif w:jspc_omnifunc != '' 
+      execute "let v = " . w:jspc_omnifunc . "(a:findstart, a:base)"
+    endif
+    return v
+  else
+    let v = []
+    if w:jspc_finding == 1
+      let w:jspc_finding = 0
+      let v = jspc#complete(a:findstart, a:base)
+    elseif w:jspc_omnifunc != '' 
+      execute "let v = " . w:jspc_omnifunc . "(a:findstart, a:base)"
+    endif
     return v
   endif
 endfunc

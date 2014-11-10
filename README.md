@@ -21,20 +21,21 @@ Future
 
 Build a framework to let this feature can be used on other language.
 
+Installation
+------------
+
+Use [Vundle][] or [pathogen.vim][] is recommended.
+
+[Vundle]:https://github.com/gmarik/vundle
+[pathogen.vim]:https://github.com/tpope/vim-pathogen
+
+For Vundle:
+
+    Plugin 'othree/jspc.vim'
+
 Configure
 ---------
 
-Configure for [autocomplpop][]:
-
-    let behavs = { 'javascript': [] }
-    call add(behavs.javascript, {
-    \ 'command' : "\<C-x>\<C-u>",
-    \ 'completefunc' : 'jspc#complete',
-    \ 'meets' : 'jspc#meet',
-    \ 'repeat' : 0,
-    \ })
-    let g:acp_behavior = {}
-    call extend(g:acp_behavior, behavs, 'keep')
-
+No special configure required. JSPC will wrap omnifunc. And if cursor position is inside string quotes and the string is in `encrypt` or `on` function call's argument list. It will use JSPC to grab the complete suggestion. Otherwise it will use original omnifunc.
 
 [autocomplpop]:https://github.com/othree/vim-autocomplpop

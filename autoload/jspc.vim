@@ -41,7 +41,7 @@ function! jspc#complete(findstart, base)
   if a:findstart == 1
     let line = getline('.')
     let start = col('.') - 1
-    while start >= 0 && line[start - 1] !~ "[\"']"
+    while start >= 0 && (line[start - 1] !~ "[\"']" || line[start - 2] == "\\")
       let start -= 1
     endwhile
     return start

@@ -5,6 +5,20 @@
 " Version:     0.1
 " URL:         https://github.com/othree/jspc.vim
 
+let s:omnifunc = ''
+
+function! jspc#remember()
+  let s:omnifunc = &omnifunc
+  set omnifunc=jspc#omni
+endfunction
+
+function! jspc#omni(findstart, base)
+  if s:omnifunc != ''
+    execute "let v = " . s:omnifunc . "(a:findstart, a:base)"
+    return v
+  endif
+endfunc
+
 function! jspc#meet(context)
   echom a:context
   echom a:context =~ "[\"']\k*$"

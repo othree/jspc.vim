@@ -46,7 +46,7 @@ function! jspc#complete(findstart, base)
     endwhile
     return start
   else
-    let pattern = ',\@<! \+\|('
+    let pattern = '\k\zs \+\|('
     let line = getline('.')
     let col = col('.')
     let end = -1

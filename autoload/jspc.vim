@@ -34,8 +34,6 @@ function! jspc#omni(findstart, base)
 endfunc
 
 function! jspc#meet(context)
-  echom a:context
-  echom a:context =~ "[\"']\k*$"
   return a:context =~ "[\"']\k*$"
 endfunction
 
@@ -46,7 +44,6 @@ function! jspc#complete(findstart, base)
     while start >= 0 && line[start - 1] !~ "[\"']"
       let start -= 1
     endwhile
-    echom start
     return start
   else
     let pattern = ',\@<! \+\|('
@@ -54,7 +51,6 @@ function! jspc#complete(findstart, base)
     let col = col('.')
     let end = -1
     let index = match(line, pattern, end)
-    echom index
 
     while index >= 0 && index < col
       let end = index
@@ -72,7 +68,6 @@ function! jspc#complete(findstart, base)
 
     let res = jspc#getlist(method)
     let expr = 'v:val =~? '."'^".escape(a:base, '\\/.*$^~[]').".*'"
-    echom expr
     let res = filter(deepcopy(res), expr)
 
     return res

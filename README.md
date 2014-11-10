@@ -1,3 +1,3 @@
-JavasScript Parameter Complete a.k.a JSPC
+JavaScript Parameter Complete a.k.a JSPC
 =========================================
 

@@ -16,10 +16,13 @@ Why here is a JavaScript complete function just for parameter values? Because al
 Since autocomplpop supports multiple complete function. So I start this project. First target is to support event name and crypto algorithm name.
 
 
-Future
-------
+Supports
+--------
 
-Build a framework to let this feature can be used on other language.
+- JavaScript
+- CoffeeScript
+- LiveScript
+- TypeScript
 
 Installation
 ------------

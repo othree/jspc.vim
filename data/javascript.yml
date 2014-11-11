@@ -168,7 +168,15 @@ addEventListener: $Event
 removeEventListener: $Event
 on: $Event
 one: $Event
+once: $Event
 off: $Event
+bind: $Event
+trigger: $Event
+delegate: $Event
+undelegate: $Event
+listenTo: $Event
+stopListening: $Event
+listenToOnce: $Event
 
 $Event:
  - "animationend"

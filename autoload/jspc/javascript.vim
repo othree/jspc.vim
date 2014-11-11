@@ -170,7 +170,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "addEventListener" || a:method == "removeEventListener" || a:method == "on" || a:method == "one" || a:method == "off"
+  if a:method == "addEventListener" || a:method == "removeEventListener" || a:method == "on" || a:method == "one" || a:method == "once" || a:method == "off" || a:method == "bind" || a:method == "trigger" || a:method == "delegate" || a:method == "undelegate" || a:method == "listenTo" || a:method == "stopListening" || a:method == "listenToOnce"
     let list = [
      \ "animationend",
      \ "animationiteration",

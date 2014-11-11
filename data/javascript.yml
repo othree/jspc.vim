@@ -1,3 +1,11 @@
+toDataURL: $imageType
+toBlob: $imageType
+
+$imageType:
+  - "image/jpg"
+  - "image/jpeg"
+  - "image/png"
+
 encrypt: $Algorithm
 decrypt: $Algorithm
 

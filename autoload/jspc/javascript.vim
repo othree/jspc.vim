@@ -1,6 +1,14 @@
 function! jspc#javascript#getlist(method)
   let list = []
 
+  if a:method == "toDataURL" || a:method == "toBlob"
+    let list = [
+     \ "image/jpg",
+     \ "image/jpeg",
+     \ "image/png"
+     \ ]
+  endif
+
   if a:method == "encrypt" || a:method == "decrypt"
     let list = [
      \ "RSAES-PKCS1-v1_5",

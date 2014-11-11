@@ -1,6 +1,45 @@
 function! jspc#javascript#getlist(method)
   let list = []
 
+  if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString"
+    let list = [
+     \ "ar-EG",
+     \ "cs-CZ",
+     \ "da-DK",
+     \ "de-AT",
+     \ "de-CH",
+     \ "de-DE",
+     \ "el-GR",
+     \ "en-GB",
+     \ "en-US",
+     \ "es-ES",
+     \ "es-MX",
+     \ "fi-FI",
+     \ "fr-CA",
+     \ "fr-CH",
+     \ "fr-FR",
+     \ "hu-HU",
+     \ "it-IT",
+     \ "ja-JP",
+     \ "ko-KR",
+     \ "my-MM",
+     \ "nb-NO",
+     \ "nl-NL",
+     \ "pl-PL",
+     \ "pt-BR",
+     \ "pt-PT",
+     \ "ro-RO",
+     \ "ru-RU",
+     \ "sv-SE",
+     \ "th-TH",
+     \ "tr-TR",
+     \ "vi-VN",
+     \ "zh-CN",
+     \ "zh-TW",
+     \ "id-ID"
+     \ ]
+  endif
+
   if a:method == "createElement" || a:method == "createElementNS"
     let list = [
      \ "a",

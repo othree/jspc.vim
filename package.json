@@ -1,0 +1,9 @@
+{
+    "name": "jspc.vim",
+    "version": "1.0.0",
+    "description": "JavaScript Parameter Complete",
+    "devDependencies": {
+        "js-yaml": "*"
+    },
+    "license": "MIT"
+}

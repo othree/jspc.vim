@@ -1,6 +1,18 @@
 function! jspc#typescript#getlist(method)
   let list = []
 
+  if a:method == "open"
+    let list = [
+     \ "GET",
+     \ "POST",
+     \ "PUT",
+     \ "DELETE",
+     \ "PATCH",
+     \ "HEAD",
+     \ "OPTIONS"
+     \ ]
+  endif
+
   if a:method == "toDataURL" || a:method == "toBlob"
     let list = [
      \ "image/jpg",

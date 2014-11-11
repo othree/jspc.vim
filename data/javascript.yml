@@ -1,3 +1,12 @@
+open: #XMLHttpRequest
+  - "GET"
+  - "POST"
+  - "PUT"
+  - "DELETE"
+  - "PATCH"
+  - "HEAD"
+  - "OPTIONS"
+
 toDataURL: $imageType
 toBlob: $imageType
 

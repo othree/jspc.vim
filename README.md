@@ -74,7 +74,7 @@ Structure of JSPC is very easy to extend. To extend JSPC supporting other langua
 1. Add `after/ftplugin/${filetype}.vim`. Just copy from `after/ftplugin/javascript.vim`.
 2. Write `data/${filetype}.yml`.
 3. Edit `data/gen.sh`. Add filetype to the list.
-4. Execute `gen.sh`.
+4. `npm install` and execute `gen.sh`.
 
 Patch to support other language is welcome.
 

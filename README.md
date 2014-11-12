@@ -1,7 +1,7 @@
 JavaScript Parameter Complete
 =========================================
 
-JavaScript Parameter Complete(JSPC) is a complete function parameters. Such as event names, crypto algorithms, common locales.
+JavaScript Parameter Complete(JSPC) is a complete function for function parameters. Such as event names, crypto algorithms, common locales.
 
 Some function use string as parameter. But have pre defined value. This complete function is specify for this kind of string value.
 Current JSPC only support JavaScript and several compile to JavaScript languages. Support function are from common lib and web standards.

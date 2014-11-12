@@ -78,7 +78,7 @@ JavaScript and similar language:
 - HTML element name for DOM API
 - HTTP method for XHR
 - Image type for toBlob and to DataURL from canvas
-- Cryppto algorithm
+- Web Crypto algorithm
 - General locale for Intl(toLocaleString)
 
 

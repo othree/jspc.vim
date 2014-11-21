@@ -55,7 +55,7 @@ And then it will figure out is this string an argument of function call, ex:
 
     node.addEventLitenser('_
 
-The cursor is just after `'`. And JSPC know iys inside a function call. The function is `addEventLitenser`. 
+The cursor is just after `'`. And JSPC know its inside a function call. The function is `addEventLitenser`. 
 Then JSPC can find the possible values for `addEventLitenser`. Evevy material need be in the same line to make it happen.
 JSPC will not look up on previous line. So.
 

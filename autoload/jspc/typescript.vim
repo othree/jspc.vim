@@ -121,7 +121,7 @@ function! jspc#typescript#getlist(method)
      \ ]
   endif
 
-  if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString" || method == "toLocaleString" || method == "toLocaleDateString" || method == "toLocaleTimeString"
+  if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString" || a:method == "Accept-Language" || a:method == "Content-Language" || method == "toLocaleString" || method == "toLocaleDateString" || method == "toLocaleTimeString" || method == "Accept-Language" || method == "Content-Language"
     let list = [
      \ "ar-EG",
      \ "cs-CZ",

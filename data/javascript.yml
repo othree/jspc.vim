@@ -118,6 +118,8 @@ dataType:
 toLocaleString: $Locale
 toLocaleDateString: $Locale
 toLocaleTimeString: $Locale
+"Accept-Language": $Locale
+"Content-Language": $Locale
 
 $Locale:
   - "ar-EG"

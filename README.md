@@ -69,6 +69,22 @@ This kind of coding style will not work for JSPC. JSPC also supports function ca
 
     node.addEventLitenser 'click'
 
+### Options Object
+
+JSPC have an experimental support for options object:
+
+    fetch('url', {
+      method: "P_"
+    });
+
+In this example, you will got `POST`, `PUT`, `PATCH` as complete candidates. String key also supports:
+
+    {
+      "method": "P"
+    }
+
+Current implementation will lookup candidate on every object. Not only options object as function parameter. And it only check attribute key. Not the function/method name.
+
 Support Functions
 -----------------
 
@@ -80,7 +96,7 @@ JavaScript and similar language:
 - Image type for toBlob and to DataURL from canvas
 - Web Crypto algorithm
 - General locale for Intl(toLocaleString)
-
+- Media Type(Content-Type) for fetch
 
 Extend
 ------

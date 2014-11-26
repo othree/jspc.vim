@@ -58,17 +58,22 @@ try {
 
   console.log('function! jspc#' + file + '#getlist(method)');
   console.log('  let list = []');
+  console.log('  let method = matchstr(a:method, \'\\.\\zs\\k\\+\')');
   console.log('');
 
   for (ri in rules) {
     rule = rules[ri];
     methods = rule.methods;
     candidates = rule.candidates;
+    m = []
 
     for (i in methods) {
-      methods[i] = 'a:method == "' + methods[i] + '"';
+      m.push('a:method == "' + methods[i] + '"');
     }
-    console.log('  if ' + methods.join(' || '));
+    for (i in methods) {
+      m.push('method == "' + methods[i] + '"');
+    }
+    console.log('  if ' + m.join(' || '));
     console.log('    let list = [');
     for (j in candidates) {
       ending = (j == candidates.length - 1) ? nodot : dot ;

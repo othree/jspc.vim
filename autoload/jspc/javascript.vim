@@ -1,7 +1,8 @@
 function! jspc#javascript#getlist(method)
   let list = []
+  let method = matchstr(a:method, '\.\zs\k\+')
 
-  if a:method == "getResponseHeader"
+  if a:method == "getResponseHeader" || method == "getResponseHeader"
     let list = [
      \ "Access-Control-Allow-Origin",
      \ "Accept-Ranges",
@@ -51,7 +52,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "setRequestHeader"
+  if a:method == "setRequestHeader" || method == "setRequestHeader"
     let list = [
      \ "Accept",
      \ "Accept-Charset",
@@ -98,7 +99,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "contentType" || a:method == "Content-Type" || a:method == "Accept"
+  if a:method == "contentType" || a:method == "Content-Type" || a:method == "Accept" || method == "contentType" || method == "Content-Type" || method == "Accept"
     let list = [
      \ "application/javascript",
      \ "application/json",
@@ -110,7 +111,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "dataType"
+  if a:method == "dataType" || method == "dataType"
     let list = [
      \ "xml",
      \ "html",
@@ -120,7 +121,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString"
+  if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString" || method == "toLocaleString" || method == "toLocaleDateString" || method == "toLocaleTimeString"
     let list = [
      \ "ar-EG",
      \ "cs-CZ",
@@ -159,7 +160,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "createElement" || a:method == "createElementNS"
+  if a:method == "createElement" || a:method == "createElementNS" || method == "createElement" || method == "createElementNS"
     let list = [
      \ "a",
      \ "abbr",
@@ -282,7 +283,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "open" || a:method == "method"
+  if a:method == "open" || a:method == "method" || method == "open" || method == "method"
     let list = [
      \ "GET",
      \ "POST",
@@ -294,7 +295,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "toDataURL" || a:method == "toBlob"
+  if a:method == "toDataURL" || a:method == "toBlob" || method == "toDataURL" || method == "toBlob"
     let list = [
      \ "image/jpg",
      \ "image/jpeg",
@@ -302,7 +303,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "encrypt" || a:method == "decrypt"
+  if a:method == "encrypt" || a:method == "decrypt" || method == "encrypt" || method == "decrypt"
     let list = [
      \ "RSAES-PKCS1-v1_5",
      \ "RSASSA-PKCS1-v1_5",
@@ -328,7 +329,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "addEventListener" || a:method == "removeEventListener" || a:method == "on" || a:method == "one" || a:method == "once" || a:method == "off" || a:method == "bind" || a:method == "trigger" || a:method == "delegate" || a:method == "undelegate" || a:method == "listenTo" || a:method == "stopListening" || a:method == "listenToOnce"
+  if a:method == "addEventListener" || a:method == "removeEventListener" || a:method == "on" || a:method == "one" || a:method == "once" || a:method == "off" || a:method == "bind" || a:method == "trigger" || a:method == "delegate" || a:method == "undelegate" || a:method == "listenTo" || a:method == "stopListening" || a:method == "listenToOnce" || method == "addEventListener" || method == "removeEventListener" || method == "on" || method == "one" || method == "once" || method == "off" || method == "bind" || method == "trigger" || method == "delegate" || method == "undelegate" || method == "listenTo" || method == "stopListening" || method == "listenToOnce"
     let list = [
      \ "animationend",
      \ "animationiteration",

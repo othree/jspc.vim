@@ -68,7 +68,7 @@ function! jspc#complete(findstart, base)
     endif
 
     let candidates = line[0 : end-1]
-    let start = match(candidates, '[a-zA-Z0-9_\-$]\+$')
+    let start = match(candidates, '\(\k\+\.\)\?[a-zA-Z0-9_\-$]\+$')
     let end = strlen(candidates)
     let method = candidates[start : end]
 

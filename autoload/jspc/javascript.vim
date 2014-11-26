@@ -325,7 +325,9 @@ function! jspc#javascript#getlist(method)
      \ "DELETE",
      \ "PATCH",
      \ "HEAD",
-     \ "OPTIONS"
+     \ "OPTIONS",
+     \ "TRACE",
+     \ "CONNECT"
      \ ]
   endif
 

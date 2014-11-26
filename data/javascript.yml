@@ -319,6 +319,8 @@ $httpMethods:
   - "PATCH"
   - "HEAD"
   - "OPTIONS"
+  - "TRACE"
+  - "CONNECT"
 
 open: $httpMethods #XHR
 method: $httpMethods #fetch

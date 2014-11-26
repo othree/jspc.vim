@@ -2,6 +2,24 @@ function! jspc#ls#getlist(method)
   let list = []
   let method = matchstr(a:method, '\.\zs\k\+')
 
+  if a:method == "X-UA-Compatible" || method == "X-UA-Compatible"
+    let list = [
+     \ "IE=5",
+     \ "IE=7",
+     \ "IE=8",
+     \ "IE=9",
+     \ "IE=10",
+     \ "IE=11",
+     \ "IE=edge",
+     \ "IE=EmulateIE7",
+     \ "IE=EmulateIE8",
+     \ "IE=EmulateIE9",
+     \ "IE=EmulateIE10",
+     \ "IE=EmulateIE11",
+     \ "Chrome=1"
+     \ ]
+  endif
+
   if a:method == "getResponseHeader" || a:method == "headers.get" || a:method == "headers.getAll" || a:method == "headers.has" || a:method == "headers.set" || method == "getResponseHeader" || method == "headers.get" || method == "headers.getAll" || method == "headers.has" || method == "headers.set"
     let list = [
      \ "Access-Control-Allow-Origin",

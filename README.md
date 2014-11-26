@@ -97,6 +97,7 @@ JavaScript and similar language:
 - Web Crypto algorithm
 - General locale for Intl(toLocaleString)
 - Media Type(Content-Type) for fetch
+- fetch response.headers.get
 
 Extend
 ------

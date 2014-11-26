@@ -77,6 +77,8 @@ $responseHeader:
   - "X-UA-Compatible"
 
 getResponseHeader: $responseHeader
+"headers.append": $responseHeader
+# "headers.delete": $responseHeader
 "headers.get": $responseHeader
 "headers.getAll": $responseHeader
 "headers.has": $responseHeader

@@ -1,3 +1,19 @@
+"Accept-Encoding": $Encoding
+"Content-Encoding": $Encoding
+
+$Encoding:
+  - "compress"
+  - "deflate"
+  - "exi"
+  - "gzip"
+  - "identity"
+  - "pack200-gzip"
+  - "bzip2"
+  - "lzma"
+  - "peerdist"
+  - "sdch"
+  - "xz"
+
 "X-UA-Compatible":
   - "IE=5"
   - "IE=7"

@@ -2,6 +2,22 @@ function! jspc#javascript#getlist(method)
   let list = []
   let method = matchstr(a:method, '\.\zs\k\+')
 
+  if a:method == "Accept-Encoding" || a:method == "Content-Encoding" || method == "Accept-Encoding" || method == "Content-Encoding"
+    let list = [
+     \ "compress",
+     \ "deflate",
+     \ "exi",
+     \ "gzip",
+     \ "identity",
+     \ "pack200-gzip",
+     \ "bzip2",
+     \ "lzma",
+     \ "peerdist",
+     \ "sdch",
+     \ "xz"
+     \ ]
+  endif
+
   if a:method == "X-UA-Compatible" || method == "X-UA-Compatible"
     let list = [
      \ "IE=5",

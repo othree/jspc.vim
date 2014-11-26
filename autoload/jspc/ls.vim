@@ -2,7 +2,7 @@ function! jspc#ls#getlist(method)
   let list = []
   let method = matchstr(a:method, '\.\zs\k\+')
 
-  if a:method == "getResponseHeader" || method == "getResponseHeader"
+  if a:method == "getResponseHeader" || a:method == "headers.get" || method == "getResponseHeader" || method == "headers.get"
     let list = [
      \ "Access-Control-Allow-Origin",
      \ "Accept-Ranges",

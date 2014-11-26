@@ -1,4 +1,4 @@
-getResponseHeader:
+$responseHeader:
   - "Access-Control-Allow-Origin"
   - "Accept-Ranges"
   - "Age"
@@ -44,6 +44,9 @@ getResponseHeader:
   - "X-Content-Type-Options"
   - "X-Powered-By"
   - "X-UA-Compatible"
+
+getResponseHeader: $responseHeader
+"headers.get": $responseHeader
 
 setRequestHeader:
   - "Accept"

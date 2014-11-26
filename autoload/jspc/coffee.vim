@@ -2,7 +2,7 @@ function! jspc#coffee#getlist(method)
   let list = []
   let method = matchstr(a:method, '\.\zs\k\+')
 
-  if a:method == "getResponseHeader" || a:method == "headers.get" || method == "getResponseHeader" || method == "headers.get"
+  if a:method == "getResponseHeader" || a:method == "headers.get" || a:method == "headers.getAll" || a:method == "headers.has" || a:method == "headers.set" || method == "getResponseHeader" || method == "headers.get" || method == "headers.getAll" || method == "headers.has" || method == "headers.set"
     let list = [
      \ "Access-Control-Allow-Origin",
      \ "Accept-Ranges",

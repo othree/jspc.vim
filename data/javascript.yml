@@ -47,6 +47,9 @@ $responseHeader:
 
 getResponseHeader: $responseHeader
 "headers.get": $responseHeader
+"headers.getAll": $responseHeader
+"headers.has": $responseHeader
+"headers.set": $responseHeader
 
 setRequestHeader:
   - "Accept"

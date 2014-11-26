@@ -46,11 +46,12 @@ function! jspc#complete(findstart, base)
     endwhile
     return start
   else
-    let pattern = '\k\zs \+\|('
+    let pattern = '\k\zs \+\|(\|:'
     let line = getline('.')
     let col = col('.')
     let end = -1
     let index = match(line, pattern, end)
+    let type = 'p' "parameter
 
     while index >= 0 && index < col
       let end = index
@@ -59,6 +60,11 @@ function! jspc#complete(findstart, base)
 
     if end == -1
       return []
+    endif
+
+    if line[end-1] =~ "[\"']"
+      let end = end - 1
+      let type = 'o' "options object
     endif
 
     let candidates = line[0 : end-1]

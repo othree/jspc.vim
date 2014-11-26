@@ -96,7 +96,7 @@ JavaScript and similar language:
 - Image type for toBlob and to DataURL from canvas
 - Web Crypto algorithm
 - General locale for Intl(toLocaleString)
-- Media Type(Content-Type) for fetch
+- Media Type(Content-Type) for fetch and XHR
 - fetch response.headers.get
 
 Extend

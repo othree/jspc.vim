@@ -163,7 +163,7 @@ function! jspc#coffee#getlist(method)
      \ ]
   endif
 
-  if a:method == "open"
+  if a:method == "open" || a:method == "method"
     let list = [
      \ "GET",
      \ "POST",

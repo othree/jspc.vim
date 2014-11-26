@@ -161,7 +161,7 @@ $Tag:
   - "video"
   - "wbr"
 
-open: #XMLHttpRequest
+$httpMethods: 
   - "GET"
   - "POST"
   - "PUT"
@@ -169,6 +169,9 @@ open: #XMLHttpRequest
   - "PATCH"
   - "HEAD"
   - "OPTIONS"
+
+open: $httpMethods #XHR
+method: $httpMethods #fetch
 
 toDataURL: $imageType
 toBlob: $imageType

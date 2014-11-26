@@ -1,6 +1,28 @@
 function! jspc#coffee#getlist(method)
   let list = []
 
+  if a:method == "contentType" || a:method == "Content-Type" || a:method == "Accept"
+    let list = [
+     \ "application/javascript",
+     \ "application/json",
+     \ "application/x-www-form-urlencoded",
+     \ "aaplication/xml",
+     \ "multipart/form-data",
+     \ "text/html",
+     \ "text/xml"
+     \ ]
+  endif
+
+  if a:method == "dataType"
+    let list = [
+     \ "xml",
+     \ "html",
+     \ "json",
+     \ "jsonp",
+     \ "text"
+     \ ]
+  endif
+
   if a:method == "toLocaleString" || a:method == "toLocaleDateString" || a:method == "toLocaleTimeString"
     let list = [
      \ "ar-EG",

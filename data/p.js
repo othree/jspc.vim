@@ -22,6 +22,8 @@ try {
   var ending = '';
 
   var rules = [];
+  var sublists = [];
+  var sublist = '';
 
   var cache = {};
 
@@ -49,6 +51,18 @@ try {
       } else {
         methods = [methods];
       }
+
+      sublists = candidates.filter(function (item) {
+        return /^\$/.test(item);
+      });
+      candidates = candidates.filter(function (item) {
+        return !/^\$/.test(item);
+      });
+
+      for (sublist in sublists) {
+        candidates = candidates.concat(yml[sublists[sublist]]);
+      }
+      
       rules.push({
         methods: methods,
         candidates: candidates

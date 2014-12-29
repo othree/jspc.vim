@@ -77,11 +77,7 @@ $responseHeader:
   - "X-UA-Compatible"
 
 getResponseHeader: $responseHeader
-"headers.append": $responseHeader
 # "headers.delete": $responseHeader
-"headers.get": $responseHeader
-"headers.getAll": $responseHeader
-"headers.has": $responseHeader
 
 $requestHeader:
   - "Accept"
@@ -128,7 +124,18 @@ $requestHeader:
   # - "Proxy-Connection"
 
 setRequestHeader: $requestHeader
+"headers.append": $requestHeader
 "headers.set": $requestHeader
+
+"headers.get":
+  - $requestHeader
+  - $responseHeader
+"headers.getAll": 
+  - $requestHeader
+  - $responseHeader
+"headers.has":
+  - $requestHeader
+  - $responseHeader
 
 $mediaType:
   - "application/javascript"

@@ -82,9 +82,8 @@ getResponseHeader: $responseHeader
 "headers.get": $responseHeader
 "headers.getAll": $responseHeader
 "headers.has": $responseHeader
-"headers.set": $responseHeader
 
-setRequestHeader:
+$requestHeader:
   - "Accept"
   # - "Accept-Charset"
   # - "Accept-Encoding"
@@ -127,6 +126,9 @@ setRequestHeader:
   - "X-ATT-DeviceId"
   - "X-Wap-Profile"
   # - "Proxy-Connection"
+
+setRequestHeader: $requestHeader
+"headers.set": $requestHeader
 
 $mediaType:
   - "application/javascript"

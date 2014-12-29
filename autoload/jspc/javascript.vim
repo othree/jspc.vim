@@ -36,7 +36,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "getResponseHeader" || a:method == "headers.append" || a:method == "headers.get" || a:method == "headers.getAll" || a:method == "headers.has" || a:method == "headers.set" || method == "getResponseHeader" || method == "headers.append" || method == "headers.get" || method == "headers.getAll" || method == "headers.has" || method == "headers.set"
+  if a:method == "getResponseHeader" || a:method == "headers.append" || a:method == "headers.get" || a:method == "headers.getAll" || a:method == "headers.has" || method == "getResponseHeader" || method == "headers.append" || method == "headers.get" || method == "headers.getAll" || method == "headers.has"
     let list = [
      \ "Access-Control-Allow-Origin",
      \ "Accept-Ranges",
@@ -80,7 +80,7 @@ function! jspc#javascript#getlist(method)
      \ ]
   endif
 
-  if a:method == "setRequestHeader" || method == "setRequestHeader"
+  if a:method == "setRequestHeader" || a:method == "headers.set" || method == "setRequestHeader" || method == "headers.set"
     let list = [
      \ "Accept",
      \ "Accept-Language",

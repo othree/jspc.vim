@@ -98,6 +98,7 @@ JavaScript and similar language:
 - General locale for Intl(toLocaleString)
 - Media Type(Content-Type) for fetch and XHR
 - fetch response.headers.get
+- PaymentResponse.complete
 
 Extend
 ------

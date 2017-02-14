@@ -6,9 +6,9 @@
 " URL:         https://github.com/othree/jspc.vim
 
 function! jspc#init()
-  let w:jspc_omnifunc = &omnifunc
-  let w:jspc_finding = 0
-  set omnifunc=jspc#omni
+  let b:jspc_omnifunc = &omnifunc
+  let b:jspc_finding = 0
+  setlocal omnifunc=jspc#omni
 endfunction
 
 function! jspc#omni(findstart, base)
@@ -16,18 +16,18 @@ function! jspc#omni(findstart, base)
     let v = -1
     let v = jspc#complete(a:findstart, a:base)
     if v >= 0
-      let w:jspc_finding = 1
-    elseif w:jspc_omnifunc != '' 
-      execute "let v = " . w:jspc_omnifunc . "(a:findstart, a:base)"
+      let b:jspc_finding = 1
+    elseif b:jspc_omnifunc != '' 
+      execute "let v = " . b:jspc_omnifunc . "(a:findstart, a:base)"
     endif
     return v
   else
     let v = []
-    if w:jspc_finding == 1
-      let w:jspc_finding = 0
+    if b:jspc_finding == 1
+      let b:jspc_finding = 0
       let v = jspc#complete(a:findstart, a:base)
-    elseif w:jspc_omnifunc != '' 
-      execute "let v = " . w:jspc_omnifunc . "(a:findstart, a:base)"
+    elseif b:jspc_omnifunc != '' 
+      execute "let v = " . b:jspc_omnifunc . "(a:findstart, a:base)"
     endif
     return v
   endif

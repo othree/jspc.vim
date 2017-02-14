@@ -738,5 +738,13 @@ function! jspc#ls#getlist(method)
      \ ]
   endif
 
+  if a:method == "complete" || method == "complete"
+    let list = [
+     \ "success",
+     \ "fail",
+     \ "unknown"
+     \ ]
+  endif
+
   return list
 endfunction

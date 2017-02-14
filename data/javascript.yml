@@ -566,3 +566,8 @@ $Event:
  - "message"
  - "show"
 
+complete: # PaymentResponse
+ - "success"
+ - "fail"
+ - "unknown"
+

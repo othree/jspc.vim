@@ -226,6 +226,7 @@ $Tag:
   - "col"
   - "colgroup"
   - "content"
+  - "dialog"
   - "data"
   - "datalist"
   - "dd"

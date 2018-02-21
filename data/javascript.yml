@@ -389,6 +389,7 @@ $Event:
  - "animationend"
  - "animationiteration"
  - "animationstart"
+ - "beforeinstallprompt"
  - "beginEvent"
  - "endEvent"
  - "repeatEvent"

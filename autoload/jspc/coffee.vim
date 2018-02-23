@@ -617,6 +617,7 @@ function! jspc#coffee#getlist(method)
      \ "submit",
      \ "DOMFrameContentLoaded",
      \ "click",
+     \ "auxclick",
      \ "contextmenu",
      \ "DOMMouseScroll",
      \ "dblclick",

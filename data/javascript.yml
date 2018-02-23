@@ -447,6 +447,7 @@ $Event:
  - "submit"
  - "DOMFrameContentLoaded"
  - "click"
+ - "auxclick"
  - "contextmenu"
  - "DOMMouseScroll"
  - "dblclick"

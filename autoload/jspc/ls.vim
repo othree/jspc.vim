@@ -617,6 +617,7 @@ function! jspc#ls#getlist(method)
      \ "submit",
      \ "DOMFrameContentLoaded",
      \ "click",
+     \ "auxclick",
      \ "contextmenu",
      \ "DOMMouseScroll",
      \ "dblclick",

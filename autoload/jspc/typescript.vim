@@ -617,6 +617,7 @@ function! jspc#typescript#getlist(method)
      \ "submit",
      \ "DOMFrameContentLoaded",
      \ "click",
+     \ "auxclick",
      \ "contextmenu",
      \ "DOMMouseScroll",
      \ "dblclick",

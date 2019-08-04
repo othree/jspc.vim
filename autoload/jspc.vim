@@ -11,6 +11,10 @@ function! jspc#init()
   setlocal omnifunc=jspc#omni
 endfunction
 
+function! jspc#filetype(filetype)
+  return substitute(a:filetype, "[^a-z].*", "", "")
+endfunction
+
 function! jspc#omni(findstart, base)
   if a:findstart == 1
     let v = -1
@@ -72,7 +76,7 @@ function! jspc#complete(findstart, base)
     let end = strlen(candidates)
     let method = candidates[start : end]
 
-    execute "let res = jspc#". &filetype ."#getlist(method)"
+    execute "let res = jspc#". jspc#filetype(&filetype) ."#getlist(method)"
     let expr = 'v:val =~? '."'^".escape(a:base, '\\/.*$^~[]').".*'"
     let res = filter(deepcopy(res), expr)
 
